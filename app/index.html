@@ -13,6 +13,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -24,6 +25,31 @@
 
   </head>
   <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Fences Unlimited Inc.</a>
+        </div>
+
+         <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#free-estimates-details">Free Estimates</a></li>
+            <li><a href="#residential-details">Residential</a></li>
+            <li><a href="#commercial-details">Commercial</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
 
     <div class="jumbotron-home">
       <div class="jumbotron-overlay">
@@ -48,47 +74,6 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-sm-4">
-          <a href="#free-estimates-details">
-            <img class="img-circle" src="images/farm-fences/farm-fence-3.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-            <h2>Free Estimates</h2>
-          </a>
-          <p>Call (615) 299-9979 or <a href="mailto:tracy@fencesunlimitedinc.com">e-mail</a> us today!</p>
-        </div><!-- /.col-sm-4 -->
-
-        <div class="col-sm-4">
-          <a href="#residential-details">
-            <img class="img-circle" src="images/gates/gate-7.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-            <h2>Residential</h2>
-          </a>
-        </div><!-- /.col-sm-4 -->
-
-        <div class="col-sm-4">
-          <a href="#commercial-details">
-            <img class="img-circle" src="images/commercial/commercial-1.jpg" alt="Commercial fence" style="width: 140px; height: 140px;">
-            <h2>Commercial</h2>
-          </a>
-        </div><!-- /.col-sm-4 -->
-      </div><!-- /.row -->
-
-      <div class="row">
-        <div class="col-sm-4 col-sm-offset-2">
-          <a href="#commercial-details">
-            <img class="img-circle" src="images/farm-fences/farm-fence-3.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-            <h2>Contact Us</h2>
-          </a>
-        </div><!-- /.col-sm-4 -->
-
-        <div class="col-sm-4">
-          <a href="#commercial-details">
-            <img class="img-circle" src="images/gates/gate-7.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-            <h2>Examples</h2>
-          </a>
-        </div><!-- /.col-sm-4 -->
-      </div><!-- /.row -->
 
       <!-- START THE FEATURETTES -->
 
@@ -146,15 +131,392 @@
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id="examples">
+
+      <div class="row featurette col-lg-12">
+        <h2 class="featurette-heading">Examples</h2>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="#wood-fence-examples" data-toggle="tab">Wood Fences</a></li>
+          <li><a href="#farm-fence-examples" data-toggle="tab">Farm Fences</a></li>
+          <li><a href="#vinyl-fence-examples" data-toggle="tab">Vinyl Fences</a></li>
+          <li><a href="#aluminum-fence-examples" data-toggle="tab">Aluminum Fences</a></li>
+          <li><a href="#chain-link-fence-examples" data-toggle="tab">Chain Link Fences</a></li>
+          <li><a href="#gate-examples" data-toggle="tab">Gates</a></li>
+          <li><a href="#commercial-fence-examples" data-toggle="tab">Commercial Fences</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- WOOD EXAMPLES -->
+          <div class="tab-pane active gallery" id="wood-fence-examples">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/wood-fences/wood-fence-1.jpg">
+                <img class="img-thumbnail" src="images/wood-fences/wood-fence-1.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/wood-fences/wood-fence-2.jpg">
+                <img class="img-thumbnail" src="images/wood-fences/wood-fence-2.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/wood-fences/wood-fence-3.jpg">
+                <img class="img-thumbnail" src="images/wood-fences/wood-fence-3.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/wood-fences/wood-fence-4.jpg">
+                <img class="img-thumbnail" src="images/wood-fences/wood-fence-4.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/wood-fences/wood-fence-5.jpg">
+                <img class="img-thumbnail" src="images/wood-fences/wood-fence-5.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/wood-fences/wood-fence-6.jpg">
+                <img class="img-thumbnail" src="images/wood-fences/wood-fence-6.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/wood-fences/wood-fence-7.jpg">
+                <img class="img-thumbnail" src="images/wood-fences/wood-fence-7.jpg" alt="">
+              </a>
+            </div>
+          </div>
+          <!-- /WOOD EXAMPLES -->
+
+          <!-- FARM EXAMPLES -->
+          <div class="tab-pane gallery" id="farm-fence-examples">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/farm-fences/farm-fence-1.jpg">
+                <img class="img-thumbnail" src="images/farm-fences/farm-fence-1.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/farm-fences/farm-fence-2.jpg">
+                <img class="img-thumbnail" src="images/farm-fences/farm-fence-2.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/farm-fences/farm-fence-3.jpg">
+                <img class="img-thumbnail" src="images/farm-fences/farm-fence-3.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/farm-fences/farm-fence-4.jpg">
+                <img class="img-thumbnail" src="images/farm-fences/farm-fence-4.jpg" alt="">
+              </a>
+            </div>
+          </div>
+          <!-- /FARM EXAMPLES -->
+
+          <!-- VINYL EXAMPLES -->
+          <div class="tab-pane gallery" id="vinyl-fence-examples">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-1.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-1.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-2.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-2.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-3.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-3.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-4.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-4.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-5.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-5.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-6.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-6.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-7.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-7.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-8.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-8.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-9.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-9.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-10.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-10.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-11.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-11.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-12.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-12.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-13.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-13.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/vinyl-fences/vinyl-fence-14.jpg">
+                <img class="img-thumbnail" src="images/vinyl-fences/vinyl-fence-14.jpg" alt="">
+              </a>
+            </div>
+          </div>
+          <!-- /VINYL EXAMPLES -->
+
+          <!-- ALUMINUM EXAMPLES -->
+          <div class="tab-pane gallery" id="aluminum-fence-examples">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/aluminum-fences/aluminum-fence-1.jpg">
+                <img class="img-thumbnail" src="images/aluminum-fences/aluminum-fence-1.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/aluminum-fences/aluminum-fence-2.jpg">
+                <img class="img-thumbnail" src="images/aluminum-fences/aluminum-fence-2.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/aluminum-fences/aluminum-fence-3.jpg">
+                <img class="img-thumbnail" src="images/aluminum-fences/aluminum-fence-3.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/aluminum-fences/aluminum-fence-4.jpg">
+                <img class="img-thumbnail" src="images/aluminum-fences/aluminum-fence-4.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/aluminum-fences/aluminum-fence-5.jpg">
+                <img class="img-thumbnail" src="images/aluminum-fences/aluminum-fence-5.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/aluminum-fences/aluminum-fence-6.jpg">
+                <img class="img-thumbnail" src="images/aluminum-fences/aluminum-fence-6.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/aluminum-fences/aluminum-fence-7.jpg">
+                <img class="img-thumbnail" src="images/aluminum-fences/aluminum-fence-7.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/aluminum-fences/aluminum-fence-8.jpg">
+                <img class="img-thumbnail" src="images/aluminum-fences/aluminum-fence-8.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/aluminum-fences/aluminum-fence-9.jpg">
+                <img class="img-thumbnail" src="images/aluminum-fences/aluminum-fence-9.jpg" alt="">
+              </a>
+            </div>
+          </div>
+          <!-- /ALUMINUM EXAMPLES -->
+
+          <!-- CHAIN LINK EXAMPLES -->
+          <div class="tab-pane gallery" id="chain-link-fence-examples">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/chain-link-fences/chain-link-fence-1.jpg">
+                <img class="img-thumbnail" src="images/chain-link-fences/chain-link-fence-1.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/chain-link-fences/chain-link-fence-2.jpg">
+                <img class="img-thumbnail" src="images/chain-link-fences/chain-link-fence-2.jpg" alt="">
+              </a>
+            </div>
+          </div>
+          <!-- /CHAIN LINK EXAMPLES -->
+
+          <!-- GATE EXAMPLES -->
+          <div class="tab-pane gallery" id="gate-examples">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/gates/gate-1.jpg">
+                <img class="img-thumbnail" src="images/gates/gate-1.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/gates/gate-2.jpg">
+                <img class="img-thumbnail" src="images/gates/gate-2.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/gates/gate-3.jpg">
+                <img class="img-thumbnail" src="images/gates/gate-3.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/gates/gate-4.jpg">
+                <img class="img-thumbnail" src="images/gates/gate-4.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/gates/gate-5.jpg">
+                <img class="img-thumbnail" src="images/gates/gate-5.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/gates/gate-6.jpg">
+                <img class="img-thumbnail" src="images/gates/gate-6.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/gates/gate-7.jpg">
+                <img class="img-thumbnail" src="images/gates/gate-7.jpg" alt="">
+              </a>
+            </div>
+          </div>
+          <!-- /GATE EXAMPLES -->
+
+          <!-- COMMERCIAL FENCE EXAMPLES -->
+          <div class="tab-pane gallery" id="commercial-fence-examples">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-1.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-1.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-2.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-2.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-3.gif">
+                <img class="img-thumbnail" src="images/commercial/commercial-3.gif" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-4.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-4.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-5.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-5.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-6.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-6.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-7.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-7.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-8.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-8.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-9.gif">
+                <img class="img-thumbnail" src="images/commercial/commercial-9.gif" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-10.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-10.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-11.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-11.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 thumb">
+              <a href="images/commercial/commercial-12.jpg">
+                <img class="img-thumbnail" src="images/commercial/commercial-12.jpg" alt="">
+              </a>
+            </div>
+          </div>
+          <!-- /COMMERCIAL FENCE EXAMPLES -->
+
+        </div>
+      </div>
 
       <!-- /END THE FEATURETTES -->
 
 
+      <hr class="featurette-divider">
+
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p class="text-center">&copy; 2014 Company, Inc.</p>
       </footer>
 
     </div><!-- /.container -->
@@ -175,6 +537,7 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -189,6 +552,7 @@
     </script>
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>
 </html>
