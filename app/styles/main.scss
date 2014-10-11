@@ -37,6 +37,25 @@ body {
   width: auto;
 }
 
+/* CUSTOMIZE JUMBOTRON
+-------------------------------------------------- */
+.jumbotron-home {
+  @extend .jumbotron;
+  color: #fff;
+  background-image: url('../images/real-fence-banner.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0px;
+}
+.jumbotron h1 {
+  text-shadow: 0 2px 2px #333;
+}
+.jumbotron-overlay {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -69,18 +88,24 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.marketing .col-lg-4,
+.marketing .col-md-4,
+.marketing .col-sm-4 {
   margin-bottom: 20px;
   text-align: center;
 }
 .marketing h2 {
   font-weight: normal;
 }
-.marketing .col-lg-4 p {
+.marketing .col-lg-4 p,
+.marketing .col-md-4 p,
+.marketing .col-sm-4 p {
   margin-right: 10px;
   margin-left: 10px;
 }
-.marketing .col-lg-4 ul {
+.marketing .col-lg-4 ul,
+.marketing .col-md-4 ul,
+.marketing .col-sm-4 ul {
   margin-bottom: 20px;
   text-align: left;
 }
