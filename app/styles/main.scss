@@ -42,17 +42,13 @@ body {
 .jumbotron-home {
   @extend .jumbotron;
   color: #fff;
-  background-image: url('../images/real-fence-banner.jpg');
+  background-image: url('../images/real-fence-banner-dark.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 0px;
+  padding: 50px 0 30px 0;
 }
 .jumbotron-home h1 {
   font-size: 63px;
-}
-.jumbotron-overlay {
-  padding: 30px;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 .jumbotron-home .container {
   @extend .text-center;
