@@ -25,7 +25,15 @@
     <!-- endbuild -->
 
   </head>
-  <body itemscope itemtype="http://schema.org/HomeAndConstructionBusiness">
+  <body itemscope itemtype="http://schema.org/HomeAndConstructionBusiness" data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -45,8 +53,19 @@
             <li><a href="#free-estimates-details">Free Estimates</a></li>
             <li><a href="#residential-details">Residential</a></li>
             <li><a href="#commercial-details">Commercial</a></li>
-            <li><a href="#examples">Examples</a></li>
             <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#recent-activity">Recent Activity</a></li>
+            <li style="margin-top:15px;">
+              <div class="fb-like"
+                   data-href="https://www.facebook.com/pages/Fences-Unlimited-Inc/1438093509794101"
+                   data-send="false"
+                   data-layout="button_count"
+                   data-width="450"
+                   data-show-faces="false"
+                   data-colorscheme="dark">
+              </div>
+            </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -534,6 +553,24 @@
           </div>
           <!-- /COMMERCIAL FENCE EXAMPLES -->
 
+        </div>
+      </div>
+
+      <hr class="featurette-divider" id="recent-activity">
+
+      <div class="row featurette">
+        <h2 class="featurette-heading">Recent Activity</h2>
+        <div class="center-block text-center">
+          <div class="fb-like-box"
+               data-href="https://www.facebook.com/pages/Fences-Unlimited-Inc/1438093509794101"
+               data-width="700"
+               data-height="400"
+               data-colorscheme="light"
+               data-show-faces="false"
+               data-header="true"
+               data-stream="true"
+               data-show-border="true">
+          </div>
         </div>
       </div>
 
