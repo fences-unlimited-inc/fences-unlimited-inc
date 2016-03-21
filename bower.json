@@ -1,0 +1,24 @@
+{
+  "name": "fences-unlimited-inc",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.12.2",
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.2",
+    "magnific-popup": "~1.1.0",
+    "respond": "~1.4.2"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
