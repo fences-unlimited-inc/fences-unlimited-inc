@@ -26,3 +26,17 @@ Tools
 
 * CSS and other visual elements are created using the front-end framework Bootstrap: http://getbootstrap.com/
   * Using the SCSS version of Bootstrap to allow variables & custom builds
+
+Update Cert
+-----------
+* run `renew.sh`
+* You will be asked to create two files on the server to verify ownership
+* Run `copy_validation.py` in another window to easily create those files
+* Go to website to upload new keys:
+    * Choose: Install completely new Certificate key and file pair
+        * In 'Certificate Key' field, put: /etc/letsencrypt/live/fencesunlimitedinc.com-0001/privkey.pem
+        * In 'Certificate File' filed, put: /etc/letsencrypt/live/fencesunlimitedinc.com-0001/cert.pem
+    * Save
+        * In 'Certificate Chain File' field, put: /etc/letsencrypt/live/fencesunlimitedinc.com-0001/fullchain.pem
+* Wait ~5 min and check new cert
+
