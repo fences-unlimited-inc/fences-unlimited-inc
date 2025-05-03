@@ -66,6 +66,7 @@
 <style>
 	.landing-page {
 		width: 100%;
+		overflow-x: hidden;
 	}
 
 	.hero {
@@ -74,7 +75,10 @@
 		min-height: 600px;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		z-index: 1;
+		width: 100%;
+		overflow: hidden;
 	}
 
 	.hero-content {
@@ -86,6 +90,8 @@
 		padding: 2rem;
 		display: flex;
 		justify-content: center;
+		left: 0; /* Reset any potential offset */
+		right: 0; /* Reset any potential offset */
 	}
 
 	.content-panel {
@@ -94,6 +100,7 @@
 		padding: 2rem;
 		border-radius: 8px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		margin: 0 auto;
 	}
 
 	.content-panel :global(h1),
@@ -107,15 +114,20 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		right: 0;
+		bottom: 0;
 		width: 100%;
 		height: 100%;
 		z-index: 1;
+		overflow: hidden;
 	}
 
 	.hero-image img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: center;
+		display: block;
 	}
 
 	.cta-buttons {
@@ -226,6 +238,12 @@
 
 		.content-panel {
 			margin: 0 1rem;
+			width: calc(100% - 2rem); /* Account for margins */
+			max-width: 600px;
+		}
+
+		.hero-content {
+			padding: 1rem;
 		}
 	}
 </style>
