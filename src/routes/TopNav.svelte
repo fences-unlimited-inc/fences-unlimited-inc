@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '@fontsource/radley';
 	import { page } from '$app/state';
 
 	const navLinks = [
@@ -10,10 +11,13 @@
 </script>
 
 <div class="nav-wrapper">
+	<div class="page-heading">
+		<h1>Fences Unlimited Inc.</h1>
+	</div>
 	<a class="half-logo" href="/">
-		<img style="width: 150px;" src="logo.png" alt="fences unlimited inc logo" />
+		<img src="logo.png" alt="fences unlimited inc logo" />
 	</a>
-	<nav class="top-nav">
+	<nav class="main-top-nav">
 		<div class="nav-links">
 			{#each navLinks as link}
 				<a href={link.href} aria-current={page.url.pathname === link.href}>
@@ -34,7 +38,21 @@
 </div>
 
 <style>
-	.top-nav {
+	.page-heading {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: fit-content;
+		height: fit-content;
+		font-family: 'Radley', serif;
+	}
+
+	.page-heading h1 {
+		font-size: 2.5rem;
+	}
+
+	.main-top-nav {
 		position: sticky;
 		top: 0;
 		float: right;
@@ -85,6 +103,7 @@
 
 	.half-logo img {
 		padding-top: 8px;
+		width: 150px;
 	}
 
 	.nav-wrapper {
