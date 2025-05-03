@@ -1,82 +1,87 @@
-<div class="residential-section">
-	<h2>Residential Fencing</h2>
+<script>
+	import Tagline from '../Tagline.svelte';
+</script>
 
-	<div class="tagline">
-		<p class="main-tagline">Your Home. Your Style. Your Security.</p>
-		<p class="sub-tagline">Premium fencing solutions crafted for lasting beauty</p>
-	</div>
+<div class="residential-section">
+	<Tagline
+		title="Residential Fencing"
+		mainTagline="Beautiful. Durable. Affordable."
+		subTagline="Quality fencing solutions for your home"
+	/>
 
 	<div class="image-grid">
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-privacy-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Privacy+Fence"
+					alt="Privacy Fencing"
+				/>
 			</div>
-			<p class="image-caption">Treated Pine or Western Cedar Wood Fences</p>
+			<p class="image-caption">Privacy Fencing</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-decorative-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Pool+Fence"
+					alt="Pool Enclosures"
+				/>
 			</div>
-			<p class="image-caption">Wooden Fence Refurbishing and Staining</p>
+			<p class="image-caption">Pool Enclosures</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-security-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Chain+Link"
+					alt="Chain Link Fencing"
+				/>
 			</div>
-			<p class="image-caption">Barbed Wire, Wood, or Vinyl Farm Fence</p>
+			<p class="image-caption">Chain Link Fencing</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-security-fence.jpg" />
+				<img src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Wood+Fence" alt="Wood Fencing" />
 			</div>
-			<p class="image-caption">Chain Link</p>
+			<p class="image-caption">Wood Fencing</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-security-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Ornamental"
+					alt="Ornamental Fencing"
+				/>
 			</div>
-			<p class="image-caption">Vinyl Fences and Handrails</p>
+			<p class="image-caption">Ornamental Fencing</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-security-fence.jpg" />
+				<img src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=PVC+Fence" alt="PVC Fencing" />
 			</div>
-			<p class="image-caption">Ornamental Aluminum and Steel Fence and Handrails</p>
+			<p class="image-caption">PVC Fencing</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-security-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Custom+Gates"
+					alt="Custom Gates"
+				/>
 			</div>
-			<p class="image-caption">Custom Decks</p>
+			<p class="image-caption">Custom Gates</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-security-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Pet+Fence"
+					alt="Pet Containment"
+				/>
 			</div>
-			<p class="image-caption">Masonry Columns</p>
-		</div>
-
-		<div class="image-card">
-			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-security-fence.jpg" />
-			</div>
-			<p class="image-caption">Driveway and Fence Gates</p>
+			<p class="image-caption">Pet Containment</p>
 		</div>
 	</div>
 </div>
@@ -86,32 +91,6 @@
 		max-width: 1200px;
 		margin: 3rem auto;
 		padding: 0 2rem;
-	}
-
-	h2 {
-		font-family: 'Radley', serif;
-		color: #333;
-		font-size: 2.8rem;
-		margin-bottom: 2rem;
-		text-align: center;
-	}
-
-	.tagline {
-		text-align: center;
-		margin-bottom: 3rem;
-	}
-
-	.main-tagline {
-		font-size: 2rem;
-		font-weight: 600;
-		color: #0066cc;
-		margin: 0 0 0.5rem 0;
-	}
-
-	.sub-tagline {
-		font-size: 1.2rem;
-		color: #666;
-		margin: 0;
 	}
 
 	.image-grid {
@@ -150,18 +129,6 @@
 		.image-grid {
 			grid-template-columns: 1fr;
 			gap: 1.5rem;
-		}
-
-		.main-tagline {
-			font-size: 1.6rem;
-		}
-
-		.sub-tagline {
-			font-size: 1rem;
-		}
-
-		h2 {
-			font-size: 2.2rem;
 		}
 	}
 </style>

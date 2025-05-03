@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 
 	const navLinks = [
-		{ href: '/', label: 'Free Estimates' },
+		{ href: '/', label: 'Home' },
 		{ href: '/residential', label: 'Residential' },
 		{ href: '/commercial', label: 'Commercial' },
 		{ href: '/contact', label: 'Contact Us' }
@@ -62,6 +62,7 @@
 		margin-top: -65px;
 		background-color: #add8e6ff;
 		box-shadow: 0 8px 8px -2px rgba(0, 0, 0, 0.2);
+		z-index: 1000;
 	}
 
 	.nav-links {
@@ -71,19 +72,44 @@
 		float: right;
 	}
 
-	.top-nav a {
+	.nav-links a {
 		text-decoration: none;
-		color: #333;
+		color: var(--color-text-dark);
 		font-weight: 500;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		transition: all 0.2s ease-in-out;
+		position: relative;
 	}
 
-	.top-nav a:hover {
-		color: #0066cc;
+	.nav-links a::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 2px;
+		background-color: var(--color-primary);
+		transition: all 0.2s ease-in-out;
+		transform: translateX(-50%);
 	}
 
-	.top-nav a[aria-current='true'] {
-		color: #0066cc;
+	.nav-links a:hover {
+		background-color: rgba(0, 0, 0, 0.05);
+		color: var(--color-primary);
+	}
+
+	.nav-links a:hover::after {
+		width: calc(100% - 2rem);
+	}
+
+	.nav-links a[aria-current='true'] {
+		color: var(--color-primary);
 		font-weight: 600;
+	}
+
+	.nav-links a[aria-current='true']::after {
+		width: calc(100% - 2rem);
 	}
 
 	.social-link {
@@ -91,14 +117,20 @@
 		align-items: center;
 		padding: 0.5rem;
 		border-radius: 50%;
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.social-link:hover {
+		transform: translateY(-2px);
+		background-color: rgba(0, 0, 0, 0.05);
 	}
 
 	.half-logo {
 		position: sticky;
-		top: 48px;
+		top: 43px;
 		left: 40px;
-		z-index: 500;
 		display: inline;
+		z-index: 1100;
 	}
 
 	.half-logo img {

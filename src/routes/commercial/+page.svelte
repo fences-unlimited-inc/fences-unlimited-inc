@@ -1,64 +1,78 @@
-<div class="commercial-section">
-	<h2>Commercial Fencing</h2>
+<script>
+	import Tagline from '../Tagline.svelte';
+</script>
 
-	<div class="tagline">
-		<p class="main-tagline">Secure. Professional. Dependable.</p>
-		<p class="sub-tagline">Industrial-grade fencing solutions for your business infrastructure</p>
-	</div>
+<div class="commercial-section">
+	<Tagline
+		title="Commercial Fencing"
+		mainTagline="Secure. Professional. Dependable."
+		subTagline="Industrial-grade fencing solutions for your business infrastructure"
+	/>
 
 	<div class="image-grid">
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-sports-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Sports+Fence"
+					alt="Tennis Courts, Sports Fields, and Netting"
+				/>
 			</div>
 			<p class="image-caption">Tennis Courts, Sports Fields, and Netting</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-security-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Security+Gate"
+					alt="Industrial Security Gates and Fencing"
+				/>
 			</div>
 			<p class="image-caption">Industrial Security Gates and Fencing</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-warehouse-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Warehouse+Fence"
+					alt="Warehouse - Indoor"
+				/>
 			</div>
 			<p class="image-caption">Warehouse - Indoor</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-prison-fence.jpg" />
+				<img src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Security+Fence" alt="Prisons" />
 			</div>
 			<p class="image-caption">Prisons</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-tower-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Tower+Fence"
+					alt="Communication Towers"
+				/>
 			</div>
 			<p class="image-caption">Communication Towers</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-parking-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Parking+Fence"
+					alt="Parking Lots"
+				/>
 			</div>
 			<p class="image-caption">Parking Lots</p>
 		</div>
 
 		<div class="image-card">
 			<div class="placeholder-image">
-				<!-- Replace src with actual image -->
-				<img src="/path-to-commercial-fence.jpg" />
+				<img
+					src="https://placehold.co/800x600/EAEAEA/A6A6A6?text=Commercial+Fence"
+					alt="Other Commercial Fencing Applications"
+				/>
 			</div>
 			<p class="image-caption">Other Commercial Fencing Applications</p>
 		</div>
@@ -70,32 +84,6 @@
 		max-width: 1200px;
 		margin: 3rem auto;
 		padding: 0 2rem;
-	}
-
-	h2 {
-		font-family: var(--font-heading);
-		color: var(--color-text-dark);
-		font-size: 2.8rem;
-		margin-bottom: 2rem;
-		text-align: center;
-	}
-
-	.tagline {
-		text-align: center;
-		margin-bottom: 3rem;
-	}
-
-	.main-tagline {
-		font-size: 2rem;
-		font-weight: 600;
-		color: var(--color-primary);
-		margin: 0 0 0.5rem 0;
-	}
-
-	.sub-tagline {
-		font-size: 1.2rem;
-		color: var(--color-text-muted);
-		margin: 0;
 	}
 
 	.image-grid {
@@ -134,18 +122,6 @@
 		.image-grid {
 			grid-template-columns: 1fr;
 			gap: 1.5rem;
-		}
-
-		.main-tagline {
-			font-size: 1.6rem;
-		}
-
-		.sub-tagline {
-			font-size: 1rem;
-		}
-
-		h2 {
-			font-size: 2.2rem;
 		}
 	}
 </style>
