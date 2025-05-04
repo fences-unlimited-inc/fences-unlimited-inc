@@ -180,7 +180,7 @@
 
 	.info-block h3 {
 		margin-bottom: 0.5rem;
-		color: #333;
+		color: var(--color-text-dark);
 	}
 
 	.contact-form {
@@ -245,7 +245,7 @@
 		background-color: #2a4365;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 860px) {
 		.contact-content {
 			grid-template-columns: 1fr;
 		}

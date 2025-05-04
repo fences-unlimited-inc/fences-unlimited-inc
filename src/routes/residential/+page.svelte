@@ -120,12 +120,12 @@
 
 	.image-caption {
 		font-size: 1.2rem;
-		color: #333;
+		color: var(--color-text-dark);
 		margin: 0;
 		font-weight: 500;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 860px) {
 		.image-grid {
 			grid-template-columns: 1fr;
 			gap: 1.5rem;

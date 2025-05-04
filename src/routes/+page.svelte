@@ -223,7 +223,7 @@
 		font-weight: 600;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 860px) {
 		.cta-buttons {
 			flex-direction: column;
 		}

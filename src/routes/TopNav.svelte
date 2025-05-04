@@ -46,6 +46,7 @@
 		width: fit-content;
 		height: fit-content;
 		font-family: 'Radley', serif;
+		text-align: center;
 	}
 
 	.page-heading h1 {
@@ -128,17 +129,37 @@
 	.half-logo {
 		position: sticky;
 		top: 43px;
-		left: 40px;
 		display: inline;
 		z-index: 1100;
 	}
 
 	.half-logo img {
+		position: relative;
 		padding-top: 8px;
 		width: 150px;
+		left: 40px;
 	}
 
 	.nav-wrapper {
 		display: contents;
+	}
+
+	@media (max-width: 860px) {
+		.page-heading {
+			visibility: hidden;
+		}
+
+		.half-logo img {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.main-top-nav {
+			padding-right: 0;
+		}
+
+		.nav-links {
+			visibility: hidden;
+		}
 	}
 </style>
