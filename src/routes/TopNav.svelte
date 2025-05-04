@@ -232,7 +232,8 @@
 			top: 0;
 			right: 0;
 			width: 250px;
-			height: calc(100vh - 80px);
+			min-height: 425px;
+			height: calc(100vh);
 			flex-direction: column;
 			background-color: #add8e6ff;
 			padding: 1rem;
