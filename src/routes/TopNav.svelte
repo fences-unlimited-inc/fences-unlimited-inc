@@ -203,8 +203,11 @@
 	@media (max-width: 860px) {
 		.menu-container {
 			position: sticky;
-			top: 80px; /* Match your nav height */
-			height: 0; /* Don't take up space in the layout */
+			top: 80px;
+			height: 0;
+			width: 100%;
+			right: 0;
+			z-index: 100;
 		}
 
 		.page-heading {
@@ -227,18 +230,22 @@
 		.nav-links {
 			position: absolute;
 			top: 0;
-			right: -300px;
+			right: 0;
 			width: 250px;
-			height: 100vh;
+			height: calc(100vh - 80px);
 			flex-direction: column;
 			background-color: #add8e6ff;
 			padding: 1rem;
-			visibility: visible;
-			transition: right 0.3s ease-in-out;
+			visibility: hidden;
+			transform: translateX(100%);
 		}
 
 		.nav-links.open {
-			right: 0;
+			visibility: visible;
+			transform: translateX(0);
+			transition:
+				transform 0.3s ease-in-out,
+				visibility 0s linear;
 		}
 
 		.nav-links a {
