@@ -3,9 +3,4 @@ body {
 	font-size: 18px;
 	line-height: 1.25;
 	text-rendering: optimizeLegibility;
-	overflow-x: hidden;
-}
-
-html {
-	overflow-x: hidden;
 }
