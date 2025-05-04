@@ -237,15 +237,18 @@
 			flex-direction: column;
 			background-color: #add8e6ff;
 			padding: 1rem;
+			clip-path: inset(0 0 0 100%);
 			visibility: hidden;
-			transform: translateX(100%);
+			transition:
+				clip-path 0.3s ease-in-out,
+				visibility 0s linear 0.3s;
 		}
 
 		.nav-links.open {
+			clip-path: inset(0 0 0 0);
 			visibility: visible;
-			transform: translateX(0);
 			transition:
-				transform 0.3s ease-in-out,
+				clip-path 0.3s ease-in-out,
 				visibility 0s linear;
 		}
 
