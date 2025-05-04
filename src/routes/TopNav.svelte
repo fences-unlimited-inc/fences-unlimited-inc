@@ -8,7 +8,22 @@
 		{ href: '/commercial', label: 'Commercial' },
 		{ href: '/contact', label: 'Contact Us' }
 	];
+
+	let isMenuOpen = false;
+	let navElement: HTMLElement;
+
+	function toggleMenu() {
+		isMenuOpen = !isMenuOpen;
+	}
+
+	function handleClickOutside(event: MouseEvent) {
+		if (isMenuOpen && navElement && !navElement.contains(event.target as Node)) {
+			isMenuOpen = false;
+		}
+	}
 </script>
+
+<svelte:window on:click={handleClickOutside} />
 
 <div class="nav-wrapper">
 	<div class="page-heading">
@@ -17,22 +32,40 @@
 	<a class="half-logo" href="/">
 		<img src="logo.png" alt="fences unlimited inc logo" />
 	</a>
-	<nav class="main-top-nav">
-		<div class="nav-links">
-			{#each navLinks as link}
-				<a href={link.href} aria-current={page.url.pathname === link.href}>
-					{link.label}
-				</a>
-			{/each}
+	<nav class="main-top-nav" bind:this={navElement}>
+		<button
+			class="hamburger"
+			class:open={isMenuOpen}
+			on:click={toggleMenu}
+			aria-label="Toggle navigation menu"
+		>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 
-			<a
-				href="https://www.facebook.com/people/Fences-Unlimited-Inc/100045542240902/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="social-link"
-			>
-				<img src="/2023_Facebook_icon.svg" alt="Facebook Profile" width="24" height="24" />
-			</a>
+		<div class="menu-container">
+			<div class="nav-links" class:open={isMenuOpen}>
+				{#each navLinks as link}
+					<a
+						href={link.href}
+						aria-current={page.url.pathname === link.href}
+						on:click={() => (isMenuOpen = false)}
+					>
+						{link.label}
+					</a>
+				{/each}
+
+				<a
+					href="https://www.facebook.com/people/Fences-Unlimited-Inc/100045542240902/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="social-link"
+					on:click={() => (isMenuOpen = false)}
+				>
+					<img src="/2023_Facebook_icon.svg" alt="Facebook Profile" width="24" height="24" />
+				</a>
+			</div>
 		</div>
 	</nav>
 </div>
@@ -58,7 +91,7 @@
 		top: 0;
 		float: right;
 		width: 100%;
-		padding: 1rem 2rem;
+		padding: 1.2rem 2rem;
 		text-align: right;
 		margin-top: -65px;
 		background-color: #add8e6ff;
@@ -144,7 +177,36 @@
 		display: contents;
 	}
 
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 30px;
+		height: 25px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		margin-left: auto;
+		margin-right: 1rem;
+		z-index: 1200;
+	}
+
+	.hamburger span {
+		width: 30px;
+		height: 3px;
+		background-color: var(--color-text-dark);
+		transition: all 0.3s ease-in-out;
+		border-radius: 2px;
+	}
+
 	@media (max-width: 860px) {
+		.menu-container {
+			position: sticky;
+			top: 80px; /* Match your nav height */
+			height: 0; /* Don't take up space in the layout */
+		}
+
 		.page-heading {
 			visibility: hidden;
 		}
@@ -158,8 +220,50 @@
 			padding-right: 0;
 		}
 
+		.hamburger {
+			display: flex;
+		}
+
 		.nav-links {
-			visibility: hidden;
+			position: absolute;
+			top: 0;
+			right: -300px;
+			width: 250px;
+			height: 100vh;
+			flex-direction: column;
+			background-color: #add8e6ff;
+			padding: 1rem;
+			visibility: visible;
+			transition: right 0.3s ease-in-out;
+		}
+
+		.nav-links.open {
+			right: 0;
+		}
+
+		.nav-links a {
+			width: 100%;
+			text-align: left;
+			padding: 1rem;
+		}
+
+		/* Hamburger animation when menu is open */
+		.hamburger span:first-child {
+			transform: translateY(8px) rotate(45deg);
+		}
+
+		.hamburger span:nth-child(2) {
+			opacity: 0;
+		}
+
+		.hamburger span:last-child {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+
+		/* Reset hamburger when menu is closed */
+		.hamburger:not(.open) span {
+			transform: none;
+			opacity: 1;
 		}
 	}
 </style>
