@@ -2,6 +2,14 @@
 	import Tagline from '../Tagline.svelte';
 </script>
 
+<svelte:head>
+	<title>Commercial Fencing | Fences Unlimited Inc.</title>
+	<meta
+		name="description"
+		content="Secure your commercial property with custom fencing, security gates, sports enclosures, and more. Fences Unlimited Inc. delivers solutions for businesses all across Nashville and Middle Tennessee."
+	/>
+</svelte:head>
+
 <div class="commercial-section">
 	<Tagline
 		title="Commercial Fencing"

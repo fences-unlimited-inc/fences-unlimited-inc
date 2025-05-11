@@ -2,6 +2,14 @@
 	import Tagline from '../Tagline.svelte';
 </script>
 
+<svelte:head>
+	<title>Residential Fencing | Fences Unlimited Inc.</title>
+	<meta
+		name="description"
+		content="Enhance your home's security and curb appeal with high-quality residential fences from Fences Unlimited Inc. in Nashville and Middle Tennessee."
+	/>
+</svelte:head>
+
 <div class="residential-section">
 	<Tagline
 		title="Residential Fencing"

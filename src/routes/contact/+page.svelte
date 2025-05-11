@@ -27,6 +27,10 @@
 
 <svelte:head>
 	<title>Contact Us - Fences Unlimited Inc.</title>
+	<meta
+		name="description"
+		content="Get in touch with Fences Unlimited Inc. for questions, quotes, or to schedule your fencing project. Serving greater Nashville and Middle Tennessee with friendly, expert service."
+	/>
 </svelte:head>
 
 <div class="contact-page">

@@ -29,15 +29,17 @@
 	<div class="page-heading">
 		<h1>Fences Unlimited Inc.</h1>
 	</div>
-	<a class="half-logo" href="/">
+	<a class="half-logo" href="/" tabindex="-1">
 		<img src="logo.png" alt="fences unlimited inc logo" />
 	</a>
-	<nav class="main-top-nav" bind:this={navElement}>
+	<nav class="main-top-nav" aria-label="Main navigation" bind:this={navElement}>
 		<button
 			class="hamburger"
 			class:open={isMenuOpen}
 			on:click={toggleMenu}
 			aria-label="Toggle navigation menu"
+			aria-controls="main-navigation-links"
+			aria-expanded={isMenuOpen}
 		>
 			<span></span>
 			<span></span>
@@ -45,8 +47,8 @@
 		</button>
 
 		<div class="menu-container">
-			<div class="nav-links" class:open={isMenuOpen}>
-				{#each navLinks as link}
+			<div class="nav-links" id="main-navigation-links" class:open={isMenuOpen}>
+				{#each navLinks as link (link.href)}
 					<a
 						href={link.href}
 						aria-current={page.url.pathname === link.href}
@@ -61,6 +63,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					class="social-link"
+					aria-label="Visit Fences Unlimited Inc. on Facebook"
 					on:click={() => (isMenuOpen = false)}
 				>
 					<img src="/2023_Facebook_icon.svg" alt="Facebook Profile" width="24" height="24" />
