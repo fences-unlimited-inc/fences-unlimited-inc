@@ -1,27 +1,60 @@
 <script lang="ts">
 	import Tagline from '../Tagline.svelte';
+	let formElement: HTMLFormElement;
+	let submitButton: HTMLButtonElement;
+	let formSubmitted = false;
+	let submissionError = false;
+	const fenceTypes = [
+		'Wood',
+		'Chain Link',
+		'Aluminum',
+		'PVC',
+		'Farm Fence',
+		'Steel',
+		'Commercial Chain Link'
+	];
 
-	let formData = {
-		name: '',
-		phone: '',
-		email: '',
-		address: '',
-		fenceTypes: {
-			wood: false,
-			chainLink: false,
-			aluminum: false,
-			pvc: false,
-			farmFence: false,
-			steel: false,
-			commercialChainLink: false
-		},
-		comments: ''
-	};
+	async function handleSubmit() {
+		submitButton.setAttribute('disabled', 'disabled');
+		const formData = new FormData(formElement);
 
-	function handleSubmit(event: SubmitEvent) {
-		event.preventDefault();
-		// Backend integration will be added later
-		console.log('Form submitted:', formData);
+		// Process form data to handle multiple checkbox selections
+		const formDataObj: { [id: string | 'fence-types']: string | string[] } = {
+			'fence-types': <string[]>[]
+		};
+		for (const [key, value] of formData.entries()) {
+			if (key === 'fence-types') {
+				const types = formDataObj[key] as string[];
+				types.push(value as string);
+			} else {
+				formDataObj[key] = value as string;
+			}
+		}
+		const json = JSON.stringify(formDataObj);
+
+		try {
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json'
+				},
+				body: json
+			});
+			const result = await response.json();
+			if (result.success) {
+				console.log(result);
+				formSubmitted = true;
+			} else {
+				console.error('Form submission failed:', result);
+				submissionError = true;
+				submitButton.removeAttribute('disabled');
+			}
+		} catch (error) {
+			console.error('Form submission error:', error);
+			submissionError = true;
+			submitButton.removeAttribute('disabled');
+		}
 	}
 </script>
 
@@ -31,6 +64,7 @@
 		name="description"
 		content="Get in touch with Fences Unlimited Inc. for questions, quotes, or to schedule your fencing project. Serving greater Nashville and Middle Tennessee with friendly, expert service."
 	/>
+	<script src="https://web3forms.com/client/script.js" async defer></script>
 </svelte:head>
 
 <div class="contact-page">
@@ -42,9 +76,9 @@
 			<div class="info-block">
 				<h3>Address</h3>
 				<address>
-					Doug & Tracy Langston<br />
+					Doug &amp Tracy Langston<br />
 					P.O. Box 70634<br />
-					Nashville, Tennessee 37207x
+					Nashville, Tennessee 37207
 				</address>
 			</div>
 
@@ -61,95 +95,106 @@
 
 		<section class="contact-form">
 			<h2>Request Information</h2>
-			<form on:submit={handleSubmit}>
-				<div class="form-group">
-					<label for="name">Name *</label>
-					<input
-						type="text"
-						id="name"
-						bind:value={formData.name}
-						required
-						autocomplete="name"
-						placeholder="Your full name"
-					/>
-				</div>
 
-				<div class="form-group">
-					<label for="phone">Phone Number *</label>
-					<input
-						type="tel"
-						id="phone"
-						bind:value={formData.phone}
-						required
-						autocomplete="tel"
-						placeholder="(XXX) XXX-XXXX"
-					/>
+			{#if formSubmitted}
+				<div class="success-message">
+					<h3>Thank You!</h3>
+					<p>
+						Your request has been submitted successfully. We'll get back to you as soon as possible.
+					</p>
 				</div>
-
-				<div class="form-group">
-					<label for="email">Email Address</label>
-					<input
-						type="email"
-						id="email"
-						bind:value={formData.email}
-						autocomplete="email"
-						placeholder="your@email.com"
-					/>
-				</div>
-
-				<div class="form-group">
-					<label for="address">Address</label>
-					<textarea
-						id="address"
-						bind:value={formData.address}
-						autocomplete="street-address"
-						placeholder="Jobsite address"
-						rows="3"
-					></textarea>
-				</div>
-
-				<div class="form-group fence-types">
-					<label for="fence-types-selection" class="fence-types-label"
-						>Interested in: (Select all that apply)</label
-					>
-					<div class="checkbox-grid" id="fence-types-selection">
-						<label class="checkbox-label">
-							<input type="checkbox" bind:checked={formData.fenceTypes.wood} /> Wood
-						</label>
-						<label class="checkbox-label">
-							<input type="checkbox" bind:checked={formData.fenceTypes.chainLink} /> Chain Link
-						</label>
-						<label class="checkbox-label">
-							<input type="checkbox" bind:checked={formData.fenceTypes.aluminum} /> Aluminum
-						</label>
-						<label class="checkbox-label">
-							<input type="checkbox" bind:checked={formData.fenceTypes.pvc} /> PVC
-						</label>
-						<label class="checkbox-label">
-							<input type="checkbox" bind:checked={formData.fenceTypes.farmFence} /> Farm Fence
-						</label>
-						<label class="checkbox-label">
-							<input type="checkbox" bind:checked={formData.fenceTypes.steel} /> Steel
-						</label>
-						<label class="checkbox-label">
-							<input type="checkbox" bind:checked={formData.fenceTypes.commercialChainLink} /> Commercial
-							Chain Link
-						</label>
+			{:else}
+				{#if submissionError}
+					<div class="error-message">
+						<p>There was an error submitting your form. Please try again or contact us directly.</p>
 					</div>
-				</div>
+				{/if}
 
-				<div class="form-group">
-					<label for="comments">Additional Comments or Questions</label>
-					<textarea
-						id="comments"
-						bind:value={formData.comments}
-						rows="4"
-						placeholder="Tell us more about your project..."
-					></textarea>
-				</div>
+				<form bind:this={formElement} on:submit|preventDefault={handleSubmit}>
+					<input type="hidden" name="access_key" value="99226058-4277-4d38-95fa-4aa669cb9be8" />
+					<input type="hidden" name="subject" value="Website form lead" />
+					<input type="hidden" name="from_name" value="Web Form" />
+					<input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
-				<button type="submit" class="submit-button">Submit Request</button>
-			</form>
+					<div class="form-group">
+						<label for="name">Name *</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							required
+							autocomplete="name"
+							placeholder="Your full name"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="phone">Phone Number *</label>
+						<input
+							type="tel"
+							id="phone"
+							name="phone"
+							required
+							autocomplete="tel"
+							placeholder="(XXX) XXX-XXXX"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email Address</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							autocomplete="email"
+							placeholder="your@email.com"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="address">Address</label>
+						<textarea
+							id="address"
+							name="address"
+							autocomplete="street-address"
+							placeholder="Jobsite address"
+							rows="3"
+						></textarea>
+					</div>
+
+					<div class="form-group fence-types">
+						<label for="fence-types-selection" class="fence-types-label">
+							Interested in: (Select all that apply)
+						</label>
+						<div class="checkbox-grid" id="fence-types-selection">
+							{#each fenceTypes as type (type)}
+								<label class="checkbox-label">
+									<input type="checkbox" name="fence-types" value={type} />
+									{type}
+								</label>
+							{/each}
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="comments">Additional Comments or Questions</label>
+						<textarea
+							id="comments"
+							name="comments"
+							rows="4"
+							placeholder="Tell us more about your project..."
+						></textarea>
+					</div>
+					<div class="form-group">
+						<label for="comments">Are you a human?</label>
+						<div class="h-captcha" data-captcha="true"></div>
+					</div>
+
+					<button bind:this={submitButton} type="submit" class="submit-button"
+						>Submit Request</button
+					>
+				</form>
+			{/if}
 		</section>
 	</div>
 </div>
@@ -247,6 +292,52 @@
 
 	.submit-button:hover {
 		background-color: #2a4365;
+	}
+
+	.submit-button:disabled {
+		background-color: #cccccc;
+		color: #666666;
+		cursor: not-allowed;
+	}
+
+	.success-message {
+		background-color: #f0fff4;
+		border: 1px solid #68d391;
+		border-radius: 8px;
+		padding: 2rem;
+		text-align: center;
+		animation: fadeIn 0.5s ease-in-out;
+	}
+
+	.success-message h3 {
+		color: #2f855a;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.success-message p {
+		margin-bottom: 1rem;
+		line-height: 1.6;
+	}
+
+	.error-message {
+		background-color: #fff5f5;
+		border: 1px solid #fc8181;
+		border-radius: 8px;
+		padding: 1rem;
+		margin-bottom: 1.5rem;
+		color: #c53030;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	@media (max-width: 860px) {
