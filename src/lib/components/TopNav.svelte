@@ -31,7 +31,7 @@
 	<div class="page-heading">
 		<h1>Fences Unlimited Inc.</h1>
 	</div>
-	<a class="half-logo" href="/static" tabindex="-1">
+	<a class="half-logo" href="/" tabindex="-1">
 		<img src="logo.png" alt="fences unlimited inc logo" />
 	</a>
 	<nav class="main-top-nav" aria-label="Main navigation" bind:this={navElement}>
