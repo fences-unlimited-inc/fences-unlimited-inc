@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Tagline from '../Tagline.svelte';
+	import { PHONE_NUMBER, PHONE_NUMBER_HREF } from '$lib/constants';
 	let formElement: HTMLFormElement;
 	let submitButton: HTMLButtonElement;
 	let formSubmitted = false;
@@ -85,7 +86,7 @@
 			<div class="info-block">
 				<h3>Get in Touch</h3>
 				<p>
-					<strong>Phone:</strong> <a href="tel:+16152999979">(615) 299-9979</a><br />
+					<strong>Phone:</strong> <a href={PHONE_NUMBER_HREF}>{PHONE_NUMBER}</a><br />
 					<strong>Fax:</strong> (615) 299-9719<br />
 					<strong>Email:</strong>
 					<a href="mailto:Tracy@fencesunlimitedinc.com">Tracy@fencesunlimitedinc.com</a>
