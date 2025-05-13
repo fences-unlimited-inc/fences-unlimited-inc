@@ -348,5 +348,13 @@
 		.contact-page {
 			padding: 1rem;
 		}
+
+		.contact-form {
+			order: 1;
+		}
+
+		.contact-info {
+			order: 2;
+		}
 	}
 </style>
