@@ -1,6 +1,7 @@
 <script>
-	import Tagline from './Tagline.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import { PHONE_NUMBER, PHONE_NUMBER_HREF } from '$lib/constants';
+	import Tagline from '$lib/components/Tagline.svelte';
 </script>
 
 <svelte:head>
@@ -24,8 +25,12 @@
 					subTagline="Expert fence installation for residential and commercial properties"
 				/>
 				<div class="cta-buttons">
-					<a href="/residential" class="cta-button residential"> Residential Services </a>
-					<a href="/commercial" class="cta-button commercial"> Commercial Services </a>
+					<Button href="/residential" variant="residential" fullWidth={false}
+						>Residential Services</Button
+					>
+					<Button href="/commercial" variant="commercial" fullWidth={false}
+						>Commercial Services</Button
+					>
 				</div>
 			</div>
 		</div>
@@ -34,15 +39,15 @@
 	<section class="quick-contact">
 		<div class="contact-content">
 			<h2>Ready to Start Your Fencing Project?</h2>
-			<p>Get a free consultation and no-obligation quote for your residential or commercial fencing needs</p>
+			<p>
+				Get a free consultation and no-obligation quote for your residential or commercial fencing
+				needs
+			</p>
 			<div class="contact-actions">
-				<a href={PHONE_NUMBER_HREF} class="contact-button phone">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-					</svg>
+				<Button href={PHONE_NUMBER_HREF} variant="call" iconName="phone">
 					Call {PHONE_NUMBER}
-				</a>
-				<a href="/contact" class="contact-button quote">Request Free Quote</a>
+				</Button>
+				<Button href="/contact" variant="quote">Request Free Quote</Button>
 			</div>
 			<p class="contact-tagline">Serving Nashville and Middle Tennessee since 1983</p>
 		</div>
@@ -60,7 +65,7 @@
 					Transform your property with custom fencing solutions that combine security with curb
 					appeal.
 				</p>
-				<a href="/residential" class="learn-more-button">Explore Residential Options</a>
+				<Button href="/residential" variant="primary">Explore Residential Options</Button>
 			</div>
 		</div>
 
@@ -75,7 +80,7 @@
 					Industrial-grade security solutions for businesses, institutions, and commercial
 					properties.
 				</p>
-				<a href="/commercial" class="learn-more-button">Explore Commercial Options</a>
+				<Button href="/commercial" variant="primary">Explore Commercial Options</Button>
 			</div>
 		</div>
 	</section>
@@ -152,30 +157,10 @@
 		display: flex;
 		gap: 1.5rem;
 		margin-top: 2rem;
+		justify-content: center;
 	}
 
-	.cta-button {
-		padding: 1rem 2rem;
-		border-radius: 4px;
-		font-size: 1.2rem;
-		font-weight: 600;
-		text-decoration: none;
-		transition: transform 0.2s;
-	}
-
-	.cta-button:hover {
-		transform: translateY(-2px);
-	}
-
-	.cta-button.residential {
-		background-color: #4caf50;
-		color: white;
-	}
-
-	.cta-button.commercial {
-		background-color: #2196f3;
-		color: white;
-	}
+	/* Button styles now handled by Button component */
 
 	.quick-contact {
 		background-color: #f5f5f5;
@@ -195,37 +180,7 @@
 		margin-top: 2rem;
 	}
 
-	.contact-button {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 1rem 2.5rem;
-		color: white;
-		text-decoration: none;
-		border-radius: 4px;
-		font-weight: 600;
-		font-size: 1.1rem;
-		transition: all 0.2s ease-in-out;
-	}
-
-	.contact-button.phone {
-		background-color: #2c5282;
-		gap: 0.5rem;
-	}
-
-	.contact-button.phone:hover {
-		background-color: #2a4365;
-		transform: translateY(-2px);
-	}
-
-	.contact-button.quote {
-		background-color: #ff5722;
-	}
-
-	.contact-button.quote:hover {
-		background-color: #f44336;
-		transform: translateY(-2px);
-	}
+	/* Contact button styles now handled by Button component */
 
 	.contact-tagline {
 		margin-top: 1.5rem;
@@ -260,24 +215,10 @@
 
 	.highlight-content {
 		padding: 2rem;
+		text-align: center;
 	}
 
-	.learn-more-button {
-		display: inline-block;
-		margin-top: 1.5rem;
-		padding: 0.75rem 1.5rem;
-		background-color: #2196f3;
-		color: white;
-		text-decoration: none;
-		font-weight: 600;
-		border-radius: 4px;
-		transition: all 0.2s ease-in-out;
-	}
-
-	.learn-more-button:hover {
-		background-color: #1976d2;
-		transform: translateY(-2px);
-	}
+	/* Learn more button styles now handled by Button component */
 
 	@media (max-width: 860px) {
 		.cta-buttons {
@@ -289,23 +230,7 @@
 			gap: 1rem;
 		}
 
-		.contact-button {
-			width: 100%;
-			padding: 1rem 0;
-			box-sizing: border-box;
-		}
-
-		.cta-button {
-			width: 100%;
-			padding: 1rem 0;
-			box-sizing: border-box;
-		}
-
-		.learn-more-button {
-			width: 100%;
-			padding: 0.75rem 0;
-			box-sizing: border-box;
-		}
+		/* Button responsive styles now handled by Button component */
 
 		.service-highlights {
 			grid-template-columns: 1fr;

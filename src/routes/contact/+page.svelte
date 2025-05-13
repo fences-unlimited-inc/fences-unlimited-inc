@@ -1,10 +1,13 @@
 <script lang="ts">
-	import Tagline from '../Tagline.svelte';
+	import Tagline from '$lib/components/Tagline.svelte';
 	import { PHONE_NUMBER, PHONE_NUMBER_HREF } from '$lib/constants';
+	import Button from '$lib/components/Button.svelte';
+
 	let formElement: HTMLFormElement;
-	let submitButton: HTMLButtonElement;
 	let formSubmitted = false;
 	let submissionError = false;
+	let isSubmitting = false;
+
 	const fenceTypes = [
 		'Wood',
 		'Chain Link',
@@ -16,7 +19,9 @@
 	];
 
 	async function handleSubmit() {
-		submitButton.setAttribute('disabled', 'disabled');
+		if (isSubmitting) return;
+
+		isSubmitting = true;
 		const formData = new FormData(formElement);
 
 		// Process form data to handle multiple checkbox selections
@@ -42,6 +47,7 @@
 				},
 				body: json
 			});
+			isSubmitting = false;
 			const result = await response.json();
 			if (result.success) {
 				console.log(result);
@@ -49,12 +55,10 @@
 			} else {
 				console.error('Form submission failed:', result);
 				submissionError = true;
-				submitButton.removeAttribute('disabled');
 			}
 		} catch (error) {
 			console.error('Form submission error:', error);
 			submissionError = true;
-			submitButton.removeAttribute('disabled');
 		}
 	}
 </script>
@@ -187,13 +191,11 @@
 						></textarea>
 					</div>
 					<div class="form-group">
-						<label for="comments">Are you a human?</label>
-						<div class="h-captcha" data-captcha="true"></div>
+						<label for="captcha">Are you a human?</label>
+						<div class="h-captcha" data-captcha="true" id="captcha"></div>
 					</div>
 
-					<button bind:this={submitButton} type="submit" class="submit-button"
-						>Submit Request</button
-					>
+					<Button type="submit" disabled={isSubmitting} fullWidth={true}>Submit Request</Button>
 				</form>
 			{/if}
 		</section>
@@ -277,28 +279,6 @@
 		align-items: center;
 		gap: 0.5rem;
 		font-weight: normal;
-	}
-
-	.submit-button {
-		background-color: #2c5282;
-		color: white;
-		padding: 1rem 2rem;
-		border: none;
-		border-radius: 4px;
-		font-size: 1.1rem;
-		cursor: pointer;
-		width: 100%;
-		transition: background-color 0.2s;
-	}
-
-	.submit-button:hover {
-		background-color: #2a4365;
-	}
-
-	.submit-button:disabled {
-		background-color: #cccccc;
-		color: #666666;
-		cursor: not-allowed;
 	}
 
 	.success-message {
