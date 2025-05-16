@@ -4,7 +4,8 @@
 	import TopNav from '$lib/components/TopNav.svelte';
 
 	import { page } from '$app/state';
-	const base = 'https://www.fencesunlimitedinc.com';
+	import { HOST } from '$lib/constants';
+	const base = `https://${HOST}`;
 	let { children } = $props();
 
 	function buildBreadcrumb(pathname: string) {
@@ -47,6 +48,7 @@
 
 <svelte:head>
 	<link rel="canonical" href={seo.canonical} />
+	<meta property="og:url" content={seo.canonical} />
 	<!-- eslint-disable-next-line svelte/no-at-html-tags no-useless-escape -->
 	{@html `<script type="application/ld+json">${seo.breadcrumbLD}<\/script>`}
 </svelte:head>

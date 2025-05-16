@@ -49,25 +49,44 @@ export default defineConfig({
 			use: { ...devices['Desktop Safari'] }
 		},
 
-		/* Test against mobile viewports. */
 		{
-			name: 'Mobile Chrome',
-			use: { ...devices['Pixel 5'] }
+			name: 'edge',
+			use: { ...devices['Desktop Edge'] }
+		},
+
+		{
+			name: 'iphone-plus',
+			use: { ...devices['iPhone 15 Plus'] }
+		},
+
+		{
+			name: 'iphone',
+			use: { ...devices['iPhone 15'] }
+		},
+
+		{
+			name: 'iphone-landscape',
+			use: { ...devices['iPhone 15 landscape'] }
+		},
+
+		{
+			name: 'ipad',
+			use: { ...devices['iPad Pro 11'] }
+		},
+
+		{
+			name: 'ipad-landscape',
+			use: { ...devices['iPad Pro 11 landscape'] }
+		},
+
+		{
+			name: 'android',
+			use: { ...devices['Pixel 7'] }
 		},
 		{
-			name: 'Mobile Safari',
-			use: { ...devices['iPhone 12'] }
+			name: 'android-landscape',
+			use: { ...devices['Pixel 7 landscape'] }
 		}
-
-		/* Test against branded browsers. */
-		// {
-		//   name: 'Microsoft Edge',
-		//   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-		// },
-		// {
-		//   name: 'Google Chrome',
-		//   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-		// },
 	],
 
 	/* Run your local dev server before starting the tests */
