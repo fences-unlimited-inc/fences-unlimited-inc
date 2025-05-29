@@ -1,0 +1,20 @@
+<svg version="1.1"
+     baseProfile="full"
+     width="300" height="200" viewBox="0 0 300 200"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <g id="picket">
+            <rect width="28" height="162" fill="#ffffff" x="-14" y="30" style="stroke-width:0"/>
+            <polygon points="0, 3 14, 30.1 -14, 30.1" fill="#ffffff" style="stroke-width:0"/>
+        </g>
+    </defs>
+    <rect width="100%" height="100%" fill="#d0c89a" />
+    <rect y="50" height="120" width="100%" fill="#ffffff" />
+    <use transform="translate(30)" href="#picket"/>
+    <use transform="translate(70)" href="#picket"/>
+    <use transform="translate(110)" href="#picket"/>
+    <use transform="translate(150)" href="#picket"/>
+    <use transform="translate(190)" href="#picket"/>
+    <use transform="translate(230)" href="#picket"/>
+    <use transform="translate(270)" href="#picket"/>
+</svg>
