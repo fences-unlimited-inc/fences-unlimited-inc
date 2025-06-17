@@ -27,89 +27,69 @@
 
 <svelte:window on:click={handleClickOutside} />
 
-<div class="nav-wrapper">
-	<div class="page-heading">
-		<h1>Fences Unlimited Inc.</h1>
-	</div>
-	<a class="half-logo" href="/" tabindex="-1">
-		<img src="logo.png" alt="fences unlimited inc logo" />
+<nav class="main-top-nav" aria-label="Main navigation" bind:this={navElement}>
+	<a class="nav-logo" href="/" tabindex="-1">
+		<img src="logo.svg" alt="fences unlimited inc logo" />
 	</a>
-	<nav class="main-top-nav" aria-label="Main navigation" bind:this={navElement}>
-		<button
-			class="hamburger"
-			class:open={isMenuOpen}
-			on:click={toggleMenu}
-			aria-label="Toggle navigation menu"
-			aria-controls="main-navigation-links"
-			aria-expanded={isMenuOpen}
-		>
-			<span></span>
-			<span></span>
-			<span></span>
-		</button>
 
-		<div class="menu-container">
-			<div class="nav-links" id="main-navigation-links" class:open={isMenuOpen}>
-				{#each navLinks as link (link.href)}
-					<a
-						href={link.href}
-						aria-current={page.url.pathname === link.href}
-						on:click={() => (isMenuOpen = false)}
-					>
-						{link.label}
-					</a>
-				{/each}
+	<button
+		class="hamburger"
+		class:open={isMenuOpen}
+		on:click={toggleMenu}
+		aria-label="Toggle navigation menu"
+		aria-controls="main-navigation-links"
+		aria-expanded={isMenuOpen}
+	>
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
 
-				<div class="cta-container">
-					<a href={PHONE_NUMBER_HREF} class="phone-cta" on:click={() => (isMenuOpen = false)}>
-						<Icon name="phone" />
-						{PHONE_NUMBER}
-					</a>
-					<a href="/contact" class="quote-cta" on:click={() => (isMenuOpen = false)}>
-						Get a Free Quote
-					</a>
-				</div>
-
+	<div class="menu-container" class:open={isMenuOpen}>
+		<div class="nav-links" id="main-navigation-links" class:open={isMenuOpen}>
+			{#each navLinks as link (link.href)}
 				<a
-					href="https://www.facebook.com/people/Fences-Unlimited-Inc/100045542240902/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="social-link"
-					aria-label="Visit Fences Unlimited Inc. on Facebook"
+					href={link.href}
+					aria-current={page.url.pathname === link.href}
 					on:click={() => (isMenuOpen = false)}
 				>
-					<img src="/2023_Facebook_icon.svg" alt="Facebook Profile" width="24" height="24" />
+					{link.label}
+				</a>
+			{/each}
+
+			<div class="cta-container">
+				<a href={PHONE_NUMBER_HREF} class="phone-cta" on:click={() => (isMenuOpen = false)}>
+					<Icon name="phone" />
+					{PHONE_NUMBER}
+				</a>
+				<a href="/contact" class="quote-cta" on:click={() => (isMenuOpen = false)}>
+					Get a Free Quote
 				</a>
 			</div>
+
+			<a
+				href="https://www.facebook.com/people/Fences-Unlimited-Inc/100045542240902/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="social-link"
+				aria-label="Visit Fences Unlimited Inc. on Facebook"
+				on:click={() => (isMenuOpen = false)}
+			>
+				<img src="/2023_Facebook_icon.svg" alt="Facebook Profile" width="24" height="24" />
+			</a>
 		</div>
-	</nav>
-</div>
+	</div>
+</nav>
 
 <style>
-	.page-heading {
-		position: absolute;
-		left: 0;
-		right: 0;
-		margin: auto;
-		width: fit-content;
-		height: fit-content;
-		font-family: 'Radley', serif;
-		text-align: center;
-	}
-
-	.page-heading h1 {
-		font-size: 2.5rem;
-	}
-
 	.main-top-nav {
 		position: sticky;
 		top: 0;
-		float: right;
-		width: 100%;
-		padding: 1.2rem 2rem;
-		text-align: right;
-		margin-top: -65px;
-		background-color: #add8e6ff;
+		padding: 0.8rem 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--color-nav-background);
 		box-shadow: 0 8px 8px -2px rgba(0, 0, 0, 0.2);
 		z-index: 1000;
 	}
@@ -118,7 +98,6 @@
 		display: flex;
 		align-items: center;
 		gap: 2rem;
-		float: right;
 	}
 
 	.nav-links a {
@@ -213,22 +192,13 @@
 		transform: translateY(-2px);
 	}
 
-	.half-logo {
-		position: sticky;
-		top: 43px;
-		display: inline;
-		z-index: 1100;
+	.nav-logo {
+		display: flex;
+		align-items: center;
 	}
 
-	.half-logo img {
-		position: relative;
-		padding-top: 8px;
-		width: 150px;
-		left: 40px;
-	}
-
-	.nav-wrapper {
-		display: contents;
+	.nav-logo img {
+		width: 115px;
 	}
 
 	.hamburger {
@@ -241,8 +211,6 @@
 		border: none;
 		cursor: pointer;
 		padding: 0;
-		margin-left: auto;
-		margin-right: 1rem;
 		z-index: 1200;
 	}
 
@@ -256,46 +224,46 @@
 
 	@media (max-width: 860px) {
 		.menu-container {
-			position: sticky;
+			position: fixed;
 			top: 80px;
-			height: 0;
 			width: 100%;
 			right: 0;
 			z-index: 100;
+			pointer-events: none;
 		}
 
-		.page-heading {
-			visibility: hidden;
+		.menu-container.open {
+			pointer-events: auto;
 		}
 
-		.half-logo img {
-			left: 50%;
-			transform: translateX(-50%);
-		}
-
-		.main-top-nav {
-			padding-right: 0;
+		.nav-logo {
+			position: relative;
+			left: 0;
 		}
 
 		.hamburger {
+			position: absolute;
+			right: 1em;
 			display: flex;
+			margin-right: 1rem;
 		}
 
 		.nav-links {
-			position: absolute;
-			top: 0;
+			position: fixed;
+			top: 90px;
 			right: 0;
 			width: 250px;
 			min-height: 425px;
-			height: calc(100vh);
+			height: calc(100vh - 80px);
 			flex-direction: column;
-			background-color: #add8e6ff;
+			background-color: var(--color-nav-background);
 			padding: 1rem;
 			clip-path: inset(0 0 0 100%);
 			visibility: hidden;
 			transition:
 				clip-path 0.3s ease-in-out,
 				visibility 0s linear 0.3s;
+			z-index: 1100;
 		}
 
 		.nav-links.open {
