@@ -57,7 +57,7 @@
 		<div class="highlight-card residential">
 			<div class="highlight-image">
 				<!-- Replace with actual residential image -->
-				<img src="https://placehold.co/800x600" alt="Residential fencing" />
+				<img src="/residential-fencing.jpg" alt="Residential fencing" />
 			</div>
 			<div class="highlight-content">
 				<h3>Residential Fencing</h3>
@@ -72,7 +72,7 @@
 		<div class="highlight-card commercial">
 			<div class="highlight-image">
 				<!-- Replace with actual commercial image -->
-				<img src="https://placehold.co/800x600" alt="Commercial fencing" />
+				<img src="/commercial-fencing.jpg" alt="Commercial fencing" />
 			</div>
 			<div class="highlight-content">
 				<h3>Commercial Fencing</h3>

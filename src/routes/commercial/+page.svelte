@@ -5,39 +5,44 @@
 
 	const commercialImages = [
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Sports+Fence',
-			alt: 'Tennis Courts, Sports Fields, and Netting',
-			caption: 'Tennis Courts, Sports Fields, and Netting'
+			src: '/sports-field.jpg',
+			alt: 'Sports Fields and Batting Cages',
+			caption: 'Sports Fields and Batting Cages'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Security+Gate',
+			src: '/basketball-court.jpg',
+			alt: 'Basketball courts, Tennis Courts, and Netting',
+			caption: 'Basketball courts, Tennis Courts, and Netting'
+		},
+		{
+			src: '/industrial-gate.jpg',
 			alt: 'Industrial Security Gates and Fencing',
 			caption: 'Industrial Security Gates and Fencing'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Warehouse+Fence',
+			src: '/indoor-warehouse.jpg',
 			alt: 'Warehouse - Indoor',
 			caption: 'Warehouse - Indoor'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Security+Fence',
+			src: '/prison-gate.jpg',
 			alt: 'Prisons',
 			caption: 'Prisons'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Tower+Fence',
-			alt: 'Communication Towers',
-			caption: 'Communication Towers'
+			src: '/playground.jpg',
+			alt: 'Playgrounds',
+			caption: 'Playgrounds'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Parking+Fence',
-			alt: 'Parking Lots',
-			caption: 'Parking Lots'
+			src: '/bollards.jpg',
+			alt: 'Bollards',
+			caption: 'Bollards'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Commercial+Fence',
-			alt: 'Other Commercial Fencing Applications',
-			caption: 'Other Commercial Fencing Applications'
+			src: '/enclosures-and-doors.jpg',
+			alt: 'Enclosures and Doors',
+			caption: 'Enclosures and Doors'
 		}
 	];
 </script>
