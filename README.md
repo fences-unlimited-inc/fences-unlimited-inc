@@ -1,75 +1,72 @@
-# sv
+# Fences Unlimited Inc — Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern, responsive website for Fences Unlimited Inc, a fencing company specializing in residential and commercial fencing solutions. The site showcases services, materials, photo gallery, service areas, and company information, with clear calls-to-action for quotes and contact.
 
-## Creating a project
+## Overview
 
-If you're seeing this, you've probably already done this step. Congrats!
+This repository contains the source code for the Fences Unlimited Inc marketing website. It is built with SvelteKit for fast performance, great developer experience, and SEO-friendly pages.
 
-```bash
-# create a new project in the current directory
-npx sv create
+Key highlights:
+- Company website for a fencing contractor (residential and commercial)
+- Pages for services and materials, photo/gallery, about, and contact/quote requests
+- Responsive layout and navigation optimized for mobile and desktop
+- Playwright tests for cross-browser and responsive checks
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Tech Stack
+- SvelteKit + Vite
+- TypeScript
+- Playwright (end-to-end tests)
+- Docker Compose (optional local containerized setup)
 
-## Developing
+## Getting Started
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   # or open the app in a new browser tab
+   npm run dev -- --open
+   ```
 
-```bash
-npm run dev
+## Project Scripts
+- `npm run dev` — Start the development server
+- `npm run build` — Create a production build
+- `npm run preview` — Preview the production build locally
+- `npm test` — Run Playwright tests
+- `npm run test:ui` — Run Playwright in UI mode
+- `npm run test:debug` — Run Playwright in debug mode
+- `npm run test:headed` — Run Playwright with a visible browser
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Building & Deployment
 
-## Building
-
-To create a production version of your app:
-
+Create a production build:
 ```bash
 npm run build
 ```
+Preview the production build locally:
+```bash
+npm run preview
+```
 
-You can preview the production build with `npm run preview`.
+Note: For deployment targets (e.g., Node, serverless, edge), you may need a SvelteKit [adapter](https://svelte.dev/docs/kit/adapters).
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Testing
+## Tests
 
 This project uses Playwright for end-to-end testing across multiple browsers and screen sizes.
 
-### Running Tests
+- Tests live in the `tests` directory
+- Configured to run on desktop (Chrome, Firefox, Safari) and mobile profiles (Pixel 5 Chrome, iPhone 12 Safari)
+- Verify basic functionality, responsive design, and navigation
 
-```bash
-# Run all tests
-npm test
+To add new tests, create `.spec.ts` files in `tests` following existing patterns.
 
-# Run tests with UI mode
-npm run test:ui
+## Project Structure (high level)
+- `src/` — Application source (routes, components, styles)
+- `static/` — Static assets
+- `tests/` — Playwright tests
 
-# Run tests in debug mode
-npm run test:debug
-
-# Run tests in headed mode (visible browser)
-npm run test:headed
-```
-
-### Test Structure
-
-Tests are located in the `tests` directory. The tests are configured to run on:
-
-- Desktop browsers: Chrome, Firefox, Safari
-- Mobile browsers: Chrome on Pixel 5, Safari on iPhone 12
-
-The tests verify:
-
-- Basic functionality across all browsers
-- Responsive design on different screen sizes
-- Navigation between pages
-
-### Adding New Tests
-
-To add new tests, create new `.spec.ts` files in the `tests` directory following the patterns in the example tests.
+## Contact
+If you are a customer or visitor and need support or a quote, please use the Contact/Quote page on the website. For development questions, open an issue or PR in this repository.

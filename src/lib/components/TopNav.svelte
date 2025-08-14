@@ -60,7 +60,7 @@
 			<div class="cta-container">
 				<a href={PHONE_NUMBER_HREF} class="phone-cta" on:click={() => (isMenuOpen = false)}>
 					<Icon name="phone" />
-					{PHONE_NUMBER}
+					Call
 				</a>
 				<a href="/contact" class="quote-cta" on:click={() => (isMenuOpen = false)}>
 					Get a Free Quote
