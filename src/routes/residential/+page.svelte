@@ -5,44 +5,54 @@
 
 	const residentialImages = [
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Privacy+Fence',
+			src: '/privacy-fence.jpg',
 			alt: 'Privacy Fencing',
 			caption: 'Privacy Fencing'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Pool+Fence',
+			src: '/pool-fence.jpg',
 			alt: 'Pool Enclosures',
 			caption: 'Pool Enclosures'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Chain+Link',
+			src: '/chain-link.jpg',
 			alt: 'Chain Link Fencing',
 			caption: 'Chain Link Fencing'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Wood+Fence',
+			src: '/wood-fence.jpg',
 			alt: 'Wood Fencing',
 			caption: 'Wood Fencing'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Ornamental',
+			src: '/ornamental-fence.jpg',
 			alt: 'Ornamental Fencing',
 			caption: 'Ornamental Fencing'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=PVC+Fence',
+			src: '/pvc-fence.jpg',
 			alt: 'PVC Fencing',
 			caption: 'PVC Fencing'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Custom+Gates',
+			src: '/custom-gate.jpg',
 			alt: 'Custom Gates',
 			caption: 'Custom Gates'
 		},
 		{
-			src: 'https://placehold.co/800x600/EAEAEA/A6A6A6?text=Pet+Fence',
+			src: '/pet-fence.jpg',
 			alt: 'Pet Containment',
 			caption: 'Pet Containment'
+		},
+		{
+			src: '/split-rail-farm.jpg',
+			alt: 'Split Rail Farm Fence',
+			caption: 'Split Rail Farm Fence'
+		},
+		{
+			src: '/framed-farm.jpg',
+			alt: 'Framed Farm Fence with Wire',
+			caption: 'Framed Farm Fence with Wire'
 		}
 	];
 </script>

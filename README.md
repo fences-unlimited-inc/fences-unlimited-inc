@@ -7,12 +7,14 @@ A modern, responsive website for Fences Unlimited Inc, a fencing company special
 This repository contains the source code for the Fences Unlimited Inc marketing website. It is built with SvelteKit for fast performance, great developer experience, and SEO-friendly pages.
 
 Key highlights:
+
 - Company website for a fencing contractor (residential and commercial)
 - Pages for services and materials, photo/gallery, about, and contact/quote requests
 - Responsive layout and navigation optimized for mobile and desktop
 - Playwright tests for cross-browser and responsive checks
 
 ## Tech Stack
+
 - SvelteKit + Vite
 - TypeScript
 - Playwright (end-to-end tests)
@@ -32,6 +34,7 @@ Key highlights:
    ```
 
 ## Project Scripts
+
 - `npm run dev` — Start the development server
 - `npm run build` — Create a production build
 - `npm run preview` — Preview the production build locally
@@ -43,10 +46,13 @@ Key highlights:
 ## Building & Deployment
 
 Create a production build:
+
 ```bash
 npm run build
 ```
+
 Preview the production build locally:
+
 ```bash
 npm run preview
 ```
@@ -64,9 +70,11 @@ This project uses Playwright for end-to-end testing across multiple browsers and
 To add new tests, create `.spec.ts` files in `tests` following existing patterns.
 
 ## Project Structure (high level)
+
 - `src/` — Application source (routes, components, styles)
 - `static/` — Static assets
 - `tests/` — Playwright tests
 
 ## Contact
+
 If you are a customer or visitor and need support or a quote, please use the Contact/Quote page on the website. For development questions, open an issue or PR in this repository.
