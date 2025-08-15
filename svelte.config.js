@@ -10,10 +10,10 @@ const config = {
 		prerender: {
 			entries: ['*']
 		},
-        output: {
-            bundleStrategy: 'inline',
-        },
-	},
+		output: {
+			bundleStrategy: 'inline'
+		}
+	}
 };
 
 export default config;
