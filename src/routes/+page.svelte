@@ -129,7 +129,6 @@
 	.content-panel :global(h1),
 	.content-panel :global(h2),
 	.content-panel :global(p) {
-		color: var(--color-text-dark);
 		margin-bottom: 1rem;
 	}
 

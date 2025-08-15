@@ -1,6 +1,4 @@
 <script lang="ts">
-	import 'normalize.css';
-	import '$lib/style_variables.css';
 	import TopNav from '$lib/components/TopNav.svelte';
 
 	import { page } from '$app/state';

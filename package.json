@@ -37,9 +37,5 @@
 		"typescript": "^5.9.2",
 		"typescript-eslint": "^8.39.1",
 		"vite": "^7.1.2"
-	},
-	"dependencies": {
-		"@fontsource/radley": "^5.2.6",
-		"normalize.css": "^8.0.1"
 	}
 }

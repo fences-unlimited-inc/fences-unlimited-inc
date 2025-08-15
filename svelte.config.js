@@ -9,8 +9,11 @@ const config = {
 		}),
 		prerender: {
 			entries: ['*']
-		}
-	}
+		},
+        output: {
+            bundleStrategy: 'inline',
+        },
+	},
 };
 
 export default config;

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '@fontsource/radley';
 	import { page } from '$app/state';
 	import { PHONE_NUMBER, PHONE_NUMBER_HREF } from '$lib/constants';
 	import Icon from './Icon.svelte';
@@ -92,6 +91,7 @@
 		background-color: var(--color-nav-background);
 		box-shadow: 0 8px 8px -2px rgba(0, 0, 0, 0.2);
 		z-index: 1000;
+        height: 77px;
 	}
 
 	.nav-links {

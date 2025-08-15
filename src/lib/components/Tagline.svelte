@@ -21,7 +21,6 @@
 	}
 
 	h1 {
-		font-family: var(--font-heading);
 		color: var(--color-text-dark);
 		font-size: 2.8rem;
 		margin-bottom: 2rem;
