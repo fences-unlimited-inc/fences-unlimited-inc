@@ -94,7 +94,7 @@
 					<strong>Phone:</strong> <a href={PHONE_NUMBER_HREF}>{PHONE_NUMBER}</a><br />
 					<strong>Fax:</strong> (615) 299-9719<br />
 					<strong>Email:</strong>
-					<a href="mailto:contract@fencesunlimitedinc.com">contract@fencesunlimitedinc.com</a>
+					<a href="mailto:contact@fencesunlimitedinc.com">contact@fencesunlimitedinc.com</a>
 				</p>
 			</div>
 		</section>
