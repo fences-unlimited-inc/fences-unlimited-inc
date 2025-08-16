@@ -65,7 +65,7 @@
 
 <svelte:head>
 	<title>Fences Unlimited Inc. | Contact</title>
-	<og:title>Fences Unlimited Inc. | Contact</og:title>
+    <meta property="og:title" content="Fences Unlimited Inc. | Contact" />
 	<meta
 		name="description"
 		content="Get in touch with Fences Unlimited Inc. for questions, quotes, or to schedule your fencing project. Serving greater Nashville and Middle Tennessee with friendly, expert service."

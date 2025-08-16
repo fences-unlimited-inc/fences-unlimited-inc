@@ -49,7 +49,7 @@
 
 <svelte:head>
 	<title>Fences Unlimited Inc. | Commercial Fencing in Middle Tennessee</title>
-	<og:title>Fences Unlimited Inc. | Commercial Fencing in Middle Tennessee</og:title>
+    <meta property="og:title" content="Fences Unlimited Inc. | Commercial Fencing in Middle Tennessee" />
 	<meta
 		name="description"
 		content="Secure your commercial property with custom fencing, security gates, sports enclosures, and more. Fences Unlimited Inc. delivers solutions for businesses all across Nashville and Middle Tennessee."
