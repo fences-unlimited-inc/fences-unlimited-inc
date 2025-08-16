@@ -192,7 +192,6 @@
 						></textarea>
 					</div>
 					<div class="form-group">
-						<label for="captcha">Are you a human?</label>
 						<div class="h-captcha" data-captcha="true" id="captcha"></div>
 					</div>
 
