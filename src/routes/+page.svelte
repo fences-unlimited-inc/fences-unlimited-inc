@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>Fences Unlimited Inc. | Fence Contractor in Middle Tennessee</title>
-    <meta property="og:title" content="Fences Unlimited Inc. | Fence Contractor in Middle Tennessee" />
+	<meta property="og:title" content="Fence Contractor in Middle Tennessee" />
 	<meta
 		name="description"
 		content="Nashville’s trusted team for fencing—serving homeowners and businesses throughout Middle Tennessee. Explore solutions crafted to last, with free estimates and expert installation from Fences Unlimited Inc."
