@@ -58,7 +58,8 @@
 </script>
 
 <svelte:head>
-	<title>Residential Fencing | Fences Unlimited Inc.</title>
+	<title>Fences Unlimited Inc. | Residential Fencing in Middle Tennessee</title>
+	<og:title>Fences Unlimited Inc. | Residential Fencing in Middle Tennessee</og:title>
 	<meta
 		name="description"
 		content="Enhance your home's security and curb appeal with high-quality residential fences from Fences Unlimited Inc. in Nashville and Middle Tennessee."
