@@ -16,7 +16,7 @@
 <main class="landing-page">
 	<section class="hero">
 		<div class="hero-image">
-			<img src="/aluminum-fence-feature.jpg" alt="Professional fence installation" />
+			<img fetchpriority=high src="/aluminum-fence-feature.jpg" alt="Professional fence installation" />
 		</div>
 		<div class="hero-content">
 			<div class="content-panel">
